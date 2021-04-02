@@ -1,14 +1,14 @@
 # Bike Rental prediction:
 
- About Data set:
+ ABOUT DATASET:
  
  The dataset contains count of public bikes rented at each hour in Seoul Bike haring System with the corresponding Weather data and Holidays information.
 
 
-Data set link: https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand
+Dataset link: https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand
  
  
-Files:
+FILES:
 
     | static
         | css
@@ -29,7 +29,7 @@ home.html : HTML template for rendering home page
 styles.css : A style sheet for home.html
 
 
-Project Description:
+PROJECT DESCRIPTION:
 
 This Project is build for predicting number of bikes rented from a bike renting firm. 
 For building this project Python, Flask, HTML and CSS are used.
