@@ -1,6 +1,3 @@
-import os
-os.chdir("C:/Users/Pragadeesh/Documents/Data_science/Regression")
-
 from flask import Flask, request, render_template
 import pickle
 import pandas as pd
