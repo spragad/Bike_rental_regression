@@ -5,18 +5,7 @@
  The dataset contains count of public bikes rented at each hour in Seoul Bike haring System with the corresponding Weather data and Holidays information.
  Data set link: https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand
  
-File Heirarchy:
-
-| Static
-    | css
-       | bikes.jpg
-       | styles.css
-| templates
-    | home.html
-| Bike_rent.ipynb
-| Bike_rent.py
-| bike_rent.pkl
-
+Files:
 
 Bike_rent.ipynb : A jupyter Notebook containing analysis & visualisations of data and model fitting.
 Bike_rent.py : A python-flask app.
