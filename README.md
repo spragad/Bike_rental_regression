@@ -10,31 +10,15 @@ Data set link: https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand
  
 Files:
 
-
-| static
-
-
-    | css
-    
-    
-        |styles.css
-
-
-| templates
-
-
-    | home.html
-    
-    
-| Bike_rent.ipynb
-
-
-| Bike_rent.py
-
-
-| bike_rent.pkl
-
-
+    | static
+        |css
+            |style.css
+            |bikes.jpg
+     | template
+         | home.html
+     | Bike_rent.ipynb
+     | Bike_rent.py
+     | bike_rent.pkl
 
 Bike_rent.ipynb : A jupyter Notebook containing analysis & visualisations of data and model fitting.
 
