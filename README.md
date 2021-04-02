@@ -11,9 +11,9 @@ Data set link: https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand
 Files:
 
     | static
-        |css
-            |style.css
-            |bikes.jpg
+        | css
+            | style.css
+            | bikes.jpg
      | template
          | home.html
      | Bike_rent.ipynb
