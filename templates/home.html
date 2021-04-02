@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental</title>
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">BIKE RENTAL PREDICTION</a>
+            </div>
+        </div>
+    </nav>
+    <br>
+	<br>
+	<br>
+    <div class="container">
+        <form action="\predict" method="post">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Date:</h5>
+                            <!-- Date -->
+                            <input type="datetime-local" name="Date" id="Date" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Temperature (°C):</h5>
+                            <!-- Temperature -->
+                            <input type="number" step="0.01" name="Temperature" id="Temperature" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Humidity(%):</h5>
+							<!-- Humidity -->
+							<input type="number" name="Humidity" id="Humidity" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wind speed (m/s):</h5>
+                            <!-- Wind Speed -->
+							<input type="number" step="0.01" name="Wind speed" id="Wind speed" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Visibility (10m):</h5>
+                            <!-- Visibility -->
+                            <input type="number" name="Visibility" id="Visibility" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dew point temperature (°C):</h5>
+                            <!-- Dew point temperature -->
+                            <input type="number" step="0.01" name="Dew Point Temperature" id="Dew Point Temperature" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+			<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Solar Radiation (MJ/m2):</h5>
+                            <!-- Solar Radiation -->
+                            <input type="number" step="0.01" name="Solar Radiation" id="Solar Radiation" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Snowfall (cm):</h5>
+                            <!-- Snowfall (cm) -->
+                            <input type="number" step="0.01" name="Snow fall" id="Snow fall" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br>
+            <br>
+            <br>
+			<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Rainfall (mm):</h5>
+                            <!-- Rainfall -->
+                            <input type="number" step="0.01" name="Rain fall" id="Rain fall" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Functioning Day?</h5>
+                            <!-- Functioning Day -->
+                            <select name="Functioning Day" id="Functioning Day" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br>
+            <br>
+            <br>
+			<div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Season:</h5>
+                            <!-- Seasons -->
+                            <select name="Season" id="Season" required="required">
+                                <option value="Summer">Summer</option>
+                                <option value="Winter">Winter</option>
+								<option value="Autumn">Autumn</option>
+								<option value="Spring">Spring</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Holiday?</h5>
+                            <!-- Holiday -->
+                            <select name="Holiday" id="Holiday" required="Holiday">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" style="text-align: center;" value="Predict" class="btn btn-secondary">
+        </form>
+        <br>
+        <br>
+		<div class ="pred">
+        <h3>{{ prediction_text }}</h3>
+		</div>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
